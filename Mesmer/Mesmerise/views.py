@@ -44,5 +44,7 @@ def Post(request):
         if form.is_valid():
             Post=forms.cleaned_data["Post"]
             Pic = forms.cleaned_data["Pic"]
-            models.Post.objects.create(post=Post,image=Pic)
+            user = User.objects.get(username=request.user.username)
+            Post.objects.create(post=Post,image=Pic,author=user)
                 
+    redirect("/")

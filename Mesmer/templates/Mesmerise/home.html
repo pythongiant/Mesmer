@@ -1,0 +1,67 @@
+{% extends "Mesmerise/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class ="navbar">
+        <ul>
+                <li id="logo" style="font-family: 'Pacifico';text-decoration:none;"><h3>Mesmer</h3></li>
+                <li>Cheetos</li>
+                <li></li>
+            </ul>
+</div>
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+{% load staticfiles %}
+
+<script src="{% static 'Mesmerise/bower_components/horsey/dist/horsey.js' %}"></script>
+<link rel="stylesheet" href="{% static 'Mesmerise/bower_components/horsey/dist/horsey.css' %}">
+
+<div class = "row">
+        <div class="col-sm">
+    <div class ="postform">
+        {% csrf_token %}
+            <form action="#" method="POST"enctype=multipart/form-data  >
+                <center>
+
+        <div id="ctr-feature">
+        <ul style="padding-left:0px;padding-top:5px;">
+            <li><span>&#128515; </span></label></li>
+            
+            <li><button id="postButton" type="submit"><span class="glyphicon glyphicon-plus"></span></li></button>
+        </ul>
+        </div>
+        {{PostForm}}
+
+    </center>
+    <script>
+horsey(document.querySelector('textarea'), {
+  source: [{ list: [
+    { value: '@michael', text: 'Michael Jackson' },
+    { value: '@jack', text: 'Jack Johnson' },
+    { value: '@ozzy', text: 'Ozzy Osbourne' }
+  ]}],
+  getText: 'text',
+  getValue: 'value',
+  anchor: '@'
+});
+    </script>    
+    </form>
+</div>
+ <div class ="post"><b>Your Mum</b><br/>Come to get the food</div>
+</div>
+</div>
+
+            <div class="footer">
+                
+        <ul style="margin:0 auto;padding-left:0px;">
+        <li><span class="glyphicon glyphicon-th-list"></span></li>
+        <li><span class="glyphicon glyphicon-user"></span></li>
+        <li><span class="glyphicon glyphicon-heart-empty"></span></li>
+    </ul>
+
+  </div>
+
+  
+{% endblock %}

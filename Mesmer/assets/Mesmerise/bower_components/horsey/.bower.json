@@ -1,0 +1,15 @@
+{
+  "name": "horsey",
+  "homepage": "https://github.com/bevacqua/horsey",
+  "version": "4.2.2",
+  "_release": "4.2.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.2.2",
+    "commit": "5191fd801083b97205408e0a469551fc22358ba5"
+  },
+  "_source": "https://github.com/bevacqua/horsey.git",
+  "_target": "^4.2.2",
+  "_originalSource": "horsey",
+  "_direct": true
+}

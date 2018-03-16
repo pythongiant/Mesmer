@@ -113,6 +113,8 @@ STATICFILES_DIRS = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL =BASE_DIR+ '/static/'
-STATIC_ROOT=BASE_DIR+"/static/"
-MEDIA_URL =BASE_DIR+"assets/uploaded-files/"
+
+STATIC_URL = '/static/'
+MEDIA_ROOT=BASE_DIR+"/assets/uploaded-files"
+
+STATIC_ROOT=BASE_DIR+'/static/'

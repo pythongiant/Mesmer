@@ -28,7 +28,7 @@ html,body{
 
 
 .footer {
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -155,6 +155,14 @@ html,body{
     padding:1px;
     background-color: inherit;
     }
+    input[id="id_Pic"]{
+        width:0;
+        height:0;
+        z-index: -1;
+        position: absolute;
+        overflow: hidden;
+        opacity: 0;
+    }
  .post{
      
      padding:10px;
@@ -163,9 +171,13 @@ html,body{
      overflow: hidden;
      text-overflow: ellipsis; 
      white-space: nowrap; 
-
+    display: block;      
      width:50%;
+     
  }   
+ .posts{
+     padding:5px;
+ }
  
  label[for="id_Pic"]{
      font-size:150%;

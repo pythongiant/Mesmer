@@ -39,12 +39,15 @@ def home(request):
     
     return render(request,"Mesmerise/home.html",{"PostForm":form})    
 def Post(request):
+    print('void')
     if request.method == 'POST':
-        form = forms.SignUp(request.POST)
+        form = forms.PostForm(request.POST,request.FILES)
+        print(form.is_valid())
+        print(form.errors)
         if form.is_valid():
-            Post=forms.cleaned_data["Post"]
-            Pic = forms.cleaned_data["Pic"]
-            user = User.objects.get(username=request.user.username)
+            Post=form.cleaned_data["Post"]
+            Pic = form.cleaned_data["Pic"]
+            user = Profile.objects.get(username=request.user.username)
             Post.objects.create(post=Post,image=Pic,author=user)
                 
-    redirect("/")
+            return redirect("/home")

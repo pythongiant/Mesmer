@@ -17,12 +17,9 @@
 
 <script src="{% static 'Mesmerise/bower_components/horsey/dist/horsey.js' %}"></script>
 <link rel="stylesheet" href="{% static 'Mesmerise/bower_components/horsey/dist/horsey.css' %}">
-
-<div class = "row">
-        <div class="col-sm">
     <div class ="postform">
         {% csrf_token %}
-            <form action="#" method="POST"enctype=multipart/form-data  >
+            <form action="{% url 'postAction' %}" method="POST" enctype="multipart/form-data"  >
                 <center>
 
         <div id="ctr-feature">
@@ -49,9 +46,14 @@ horsey(document.querySelector('textarea'), {
     </script>    
     </form>
 </div>
- <div class ="post"><b>Your Mum</b><br/>Come to get the food</div>
+<div class ="posts">
+ <div class ="post"><b>Your Mum</b><br/>Come to get the food</div><br>
+ <div class ="post"><b>Your Mum</b><br/>Come to get the food</div><br>
+ <div class ="post"><b>Your Mum</b><br/>Come to get the food</div><br>
+ <div class ="post"><b>Your Mum</b><br/>Come to get the food</div><br>
 </div>
-</div>
+
+
 
             <div class="footer">
                 

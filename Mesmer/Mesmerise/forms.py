@@ -20,3 +20,6 @@ class PostForm(forms.Form):
     """Post Form"""
     Post = forms.CharField(widget=forms.Textarea(attrs={"placeholder":"What's going on? Mesmerise us.","rows":"1","cols":"50","autocomplete":"on"}))
     Pic = forms.FileField(required=False,label="📷 ")
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length =255,widget=forms.TextInput())
+    password = forms.CharField(widget=forms.PasswordInput(),label="Password")

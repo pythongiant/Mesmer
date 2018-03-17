@@ -7,7 +7,7 @@
         <ul>
                 <li id="logo" style="font-family: 'Pacifico';text-decoration:none;"><h3>Mesmer</h3></li>
                 <li>Cheetos</li>
-                <li></li>
+                <li>{{request.user.username}}</li>
             </ul>
 </div>
 
@@ -46,11 +46,12 @@ horsey(document.querySelector('textarea'), {
     </script>    
     </form>
 </div>
+
+
 <div class ="posts">
- <div class ="post"><b>Your Mum</b><br/>Come to get the food</div><br>
- <div class ="post"><b>Your Mum</b><br/>Come to get the food</div><br>
- <div class ="post"><b>Your Mum</b><br/>Come to get the food</div><br>
- <div class ="post"><b>Your Mum</b><br/>Come to get the food</div><br>
+{% for i in everybody %}
+ <div class ="post"><b>{{i.author.username}}</b><br/>{{i.post}}</div><br>
+ {% endfor %}
 </div>
 
 

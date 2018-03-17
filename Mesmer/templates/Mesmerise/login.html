@@ -1,0 +1,41 @@
+{% extends "Mesmerise/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+        <div class ="contatiner">
+    <div class = "jumbotron clearfix">
+        
+        <div class = "cmpnt"><h1 style="font-family: 'Pacifico';"class="logo" > Mesmere</h1><h5> A safe social network <br>for <b>Everyone.</b><br>Build your Online presence <br>from the ground up.<br></h5></div>
+        
+        <div  class="cmpnt" >
+            <h3>Login</h3>
+            <form id = "signup" action="{% url 'loginAction' %}" method="POST" enctype=multipart/form-data >
+                {% csrf_token %}
+                    {{form|crispy}}
+                    <br>
+                    <input type="submit" class="btn btn-info" value="Submit">
+
+            </form>
+        
+            <p>dont have an account?<a href="/">Sign Up</a> </p>
+        </div> 
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+              <h3>Shows</h3>
+              <p>HOLY SHIT YOU GONNA BE INTRESTED</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>INTREST!</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 3</h3>        
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+          </div>
+        </div>
+    {% endblock %}

@@ -17,16 +17,17 @@
 
 <script src="{% static 'Mesmerise/bower_components/horsey/dist/horsey.js' %}"></script>
 <link rel="stylesheet" href="{% static 'Mesmerise/bower_components/horsey/dist/horsey.css' %}">
-    <div class ="postform">
+
+<div class ="postform">
         {% csrf_token %}
             <form action="{% url 'postAction' %}" method="POST" enctype="multipart/form-data"  >
                 <center>
 
         <div id="ctr-feature">
-        <ul style="padding-left:0px;padding-top:5px;">
+        <ul style="padding-left:0px;padding-top:5px; padding-bottom:5px;">
             <li><span>&#128515; </span></label></li>
             
-            <li><button id="postButton" type="submit"><span class="glyphicon glyphicon-plus"></span></li></button>
+            <li><button id="postButton" type="submit"><span style="background-color:#23103a;color:white;padding:5px;border-radius:10px;font-size:80%;">Mesmerise</span></li></button>
         </ul>
         </div>
         {{PostForm}}

@@ -35,7 +35,7 @@ def SignAction(request):
 #wall    
 def home(request):
     form = forms.PostForm()
-    posts =models.Post.objects.all()
+    posts =Post.objects.all()
     
     return render(request,"Mesmerise/home.html",{"PostForm":form,"everybody":posts})    
 def tPost(request):

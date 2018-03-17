@@ -50,7 +50,16 @@ horsey(document.querySelector('textarea'), {
 
 <div class ="posts">
 {% for i in everybody %}
- <div class ="post"><b>{{i.author.username}}</b><br/>{{i.post}}</div><br>
+ <p><div class ="post">
+     <b>{{i.author.username}}</b><br/>
+     {{i.post}}<br>
+     
+{% load staticfiles %}
+
+{% if not i.image == "" %}
+<img src="{% static 'uploaded-files/' %}{{i.image}}">    
+{% endif %}
+    </div></p>
  {% endfor %}
 </div>
 

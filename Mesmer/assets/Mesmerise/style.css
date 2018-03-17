@@ -1,5 +1,5 @@
 html,body{
-    background-color: #f1f1f1;
+
     overflow-x:hidden;
     width:100%;
     height: 100%;
@@ -78,8 +78,8 @@ html,body{
     padding:5px;
  }
  textarea:focus {
-    border-color: #719ECE;
-    box-shadow: 0 0 10px #719ECE;
+    border-color: #23103a;
+    box-shadow: 0 0 10px #23103a;
 }
  label[for="id_Post"]{
      display: none;
@@ -166,7 +166,7 @@ html,body{
  .post{
      
      padding:10px;
-     box-shadow: 0 0 10px #555;
+     border: solid 1px;
      margin: auto;
      overflow: hidden;
      text-overflow: ellipsis; 
@@ -177,6 +177,7 @@ html,body{
  }   
  .posts{
      padding:5px;
+     
  }
  
  label[for="id_Pic"]{
